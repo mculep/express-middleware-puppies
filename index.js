@@ -91,11 +91,13 @@ app.get("/puppies", (req, res) => {
 });
 
 // - `/pets/:name`: show the pet
-app.get("/puppies/:name", (req, res) => {
+app.get("/puppies/:name/:bree", (req, res) => {
     const name = req.params.name;
+    const breed = req.params.breed;
     res.render("puppies-details.html", {
         locals: {
-            pet: puppies[name],
+            pet: name,
+            genre: breed,
             // breed: puppies[breed],
         },
     });
