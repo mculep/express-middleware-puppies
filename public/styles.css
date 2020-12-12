@@ -1,0 +1,18 @@
+body {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(32, 85, 22);
+}
+
+li {
+    color: blue;
+    list-style-type: none;
+}
+
+p {
+    color: rgb(71, 71, 150);
+}
