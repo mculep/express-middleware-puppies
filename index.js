@@ -47,7 +47,7 @@ app.set("view engine", "html");
 
 const server = http.createServer(app);
 const port = 3000;
-const host = "localhost";
+const host = "0.0.0.0";
 
 app.use(logger); // - logging
 app.use(helmet()); // - helmet
@@ -94,7 +94,7 @@ app.get("/puppies", (req, res) => {
 app.get("/puppies/:name/:breed", (req, res) => {
     const name = req.params.name;
     const breed = req.params.breed;
-    res.render("puppies-details.html", {
+    res.render("puppies-details", {
         locals: {
             pet: name,
             genre: breed,
